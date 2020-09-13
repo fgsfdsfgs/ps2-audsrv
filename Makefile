@@ -13,9 +13,6 @@ endif
 SUBDIRS = iop ee
 
 all: build
-	@$(ECHO) .;
-	@$(ECHO) .PS2SDK Built.;
-	@$(ECHO) .;
 
 # Common rules shared by all build targets.
 

@@ -30,6 +30,10 @@ IOP_CFLAGS := -D_IOP -fno-builtin -Os -G0 -Wall -Werror $(IOP_INCS) $(IOP_CFLAGS
 # Linker flags
 IOP_LDFLAGS := -nostdlib -s $(IOP_LDFLAGS)
 
+ifeq ($(DEBUG),1)
+IOP_CFLAGS += -g
+endif
+
 # Additional C compiler flags for GCC >=v5.3.0
 # -msoft-float is to "remind" GCC/Binutils that the soft-float ABI is to be used. This is due to a bug, which
 #   results in the ABI not being passed correctly to binutils and iop-as defaults to the hard-float ABI instead.

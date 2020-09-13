@@ -525,7 +525,7 @@ static int up_22050_16_stereo(struct upsample_t *up)
 static int up_32000_8_mono(struct upsample_t *up)
 {
 	up_generic_8_mono(up, up_32000_lut);
-	return 341; /* (32000 / 48000) * 512 */
+	return 340; /* (32000 / 48000) * 512 */
 }
 
 static int up_32000_16_mono(struct upsample_t *up)
@@ -537,7 +537,7 @@ static int up_32000_16_mono(struct upsample_t *up)
 static int up_32000_16_stereo(struct upsample_t *up)
 {
 	up_generic_16_stereo(up, up_32000_lut);
-	return 1365; /* (32000 / 48000) * 512 * stereo * 16bit */
+	return 1364; /* (32000 / 48000) * 512 * stereo * 16bit */
 }
 
 static int up_44100_8_mono(struct upsample_t *up)

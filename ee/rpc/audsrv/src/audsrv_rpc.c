@@ -491,3 +491,8 @@ int audsrv_available()
 	return call_rpc_1(AUDSRV_AVAILABLE, 0);
 }
 
+int audsrv_queued()
+{
+	return call_rpc_1(AUDSRV_QUEUED, 0);
+}
+

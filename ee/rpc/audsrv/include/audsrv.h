@@ -16,7 +16,7 @@
 #ifndef __AUDSRV_H__
 #define __AUDSRV_H__
 
-#define	AUDSRV_IRX              0x870884d
+#define	AUDSRV_IRX              0x870884e
 
 /** minmum volume */
 #define MIN_VOLUME                 0
@@ -261,6 +261,13 @@ int audsrv_on_cdda_stop(audsrv_callback_t cb, void *arg);
  * head with the writing head.
  */
 int audsrv_available();
+
+/** Returns the number of bytes already in queue
+ * @returns byte count
+
+ * Returns the number of bytes that are already in the ring buffer.
+ */
+int audsrv_queued();
 
 #ifdef __cplusplus
 }

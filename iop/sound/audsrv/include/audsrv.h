@@ -49,6 +49,8 @@
 #define AUDSRV_PLAY_ADPCM           0x0018
 #define AUDSRV_SET_ADPCM_VOL        0x0019
 
+#define AUDSRV_AVAILABLE            0x0020
+
 #define AUDSRV_FILLBUF_CALLBACK     0x0001
 #define AUDSRV_CDDA_CALLBACK        0x0002
 
@@ -72,6 +74,7 @@ int audsrv_wait_audio(int buflen);
 int audsrv_play_audio(const char *buf, int buflen);
 int audsrv_stop_audio();
 int audsrv_set_volume(int vol);
+int audsrv_available();
 
 /* cdda playing functions */
 int audsrv_play_cd(int track);

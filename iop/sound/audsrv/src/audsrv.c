@@ -31,8 +31,8 @@
 #include "hw.h"
 #include "spu.h"
 
-#define VERSION "0.92"
-IRX_ID("audsrv", 1, 3);
+#define VERSION "0.93"
+IRX_ID("audsrv", 1, 4);
 
 /* globals */
 /** core1 (sfx) volume */

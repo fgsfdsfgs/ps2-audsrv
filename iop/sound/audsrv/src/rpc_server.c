@@ -146,6 +146,10 @@ static void *rpc_command(int func, unsigned *data, int size)
 		ret = audsrv_adpcm_set_volume(data[0], data[1]);
 		break;
 
+		case AUDSRV_AVAILABLE:
+		ret = audsrv_available();
+		break;
+
 		default:
 		ret = -1;
 		break;

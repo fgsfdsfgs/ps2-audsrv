@@ -14,7 +14,11 @@
 # Definitions for the EE toolchain.
 #
 
-EE_TOOL_PREFIX ?= ee-
+ifeq ($(USE_NEW_PS2SDK),1)
+  EE_TOOL_PREFIX ?= mips64r5900el-ps2-elf-
+else
+  EE_TOOL_PREFIX ?= ee-
+endif
 EE_CC = $(EE_TOOL_PREFIX)gcc
 EE_CXX = $(EE_TOOL_PREFIX)g++
 EE_AS = $(EE_TOOL_PREFIX)as

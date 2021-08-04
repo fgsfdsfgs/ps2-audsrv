@@ -32,7 +32,11 @@ EE_STRIP = $(EE_TOOL_PREFIX)strip
 # Defintions for the IOP toolchain.
 #
 
-IOP_TOOL_PREFIX ?= iop-
+ifeq ($(USE_NEW_PS2SDK),1)
+  IOP_TOOL_PREFIX ?= mipsel-ps2-irx-
+else
+  IOP_TOOL_PREFIX ?= iop-
+endif
 IOP_CC = $(IOP_TOOL_PREFIX)gcc
 IOP_AS = $(IOP_TOOL_PREFIX)as
 IOP_LD = $(IOP_TOOL_PREFIX)ld
